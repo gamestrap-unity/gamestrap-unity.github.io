@@ -1,0 +1,161 @@
+{
+    "pages": [
+        "Introduction",
+        "Documentation",
+        "Example",
+        "API"
+    ],
+    "logo": "camera_logo.png",
+    "assetHTML": "https://api.assetstore.unity3d.com/affiliate/embed/package/39370/widget-wide-light?aid=1100lGad",
+    "assetLink": "https://www.assetstore.unity3d.com/#!/content/39370?aid=1100lGad",
+    "assetIcon": "https://api.assetstore.unity3d.com/affiliate/embed/package/39370/icon",
+    "intro": "<b>Gamestrap Editor Camera</b> is a tool that helps you navigate around your scenes, it helps with your workflow by <b>saving your camera views</b> in the <b>editor scene</b> so you can go back and forward between them.",
+    "trailer": "Z3h9JTk7Fz4",
+    "features": [
+        {
+            "feature": "SIMPLE UI",
+            "icon": "object-group"
+        },
+        {
+            "feature": "RUNTIME SYSTEM",
+            "icon": "play"
+        },
+        {
+            "feature": "IMPROVED WORKFLOW",
+            "icon": "cog"
+        },
+        {
+            "feature": "2D & ISO MODE SUPPORTED",
+            "icon": "image"
+        },
+        {
+            "feature": "MULTIPLE SCENE & VIEWS",
+            "icon": "files-o"
+        },
+        {
+            "feature": "SHORT-CUTS",
+            "icon": "reply"
+        }
+    ],
+    "testimonials": [
+        
+        {
+            "user": " Steve555",
+            "title": "Brilliantly Simple, and useful.",
+            "message": "Great tool for quickly examing your scene from any camera position while in Editor mode. Saves having to re-position the editor view, or drop in to Play just to check the player's view."
+        },
+        {
+            "user": "Dan2013",
+            "title": "Simple and very useful",
+            "message": "Save my time to figure out how to make my own one. Simple and very useful. Recommend."
+        },
+        {
+            "user": "Lucky Pal",
+            "title": "This could be you!",
+            "message": "The asset doesn't have many reviews yet, we are waiting for your reviews!"
+        }
+    ],
+    "webgl": "",
+    "documentation": [
+        {
+            "name": "Editor Camera Window",
+            "features": [
+                {
+                    "name": "Open Window",
+                    "description": "To open the window, go to <code>Window/Gamestrap/Editor Camera</code>"
+                    , "img" : "img/doc/camera/openwindow.png"
+                },
+                {
+                    "name": "Camera State Management",
+                    "description": "<ul><li>Each button represents a camera state</li><li>Each scene has it's own set of camera states</li><li>You can use shortcuts by pressing alt and the number 1-5</li><li><b>Left Click</b><ul><li>Creates a new state</li><li>Editor Camera goes to the state if already created</li></ul><li><b>Right Click</b> - Deletes the state</li></ul>",
+                    "img": "img/doc/camera/editorwindow.png"
+                },
+                {
+                    "name": "Camera State Detail",
+                    "description": "When clicking on a state you'll see the name and color show up, you can change them as you wish. Also, if you click on the arrow on the right side you'll be able to access and modify more details of the camera state to your liking.<br><h4>Warnings</h4><ul><li>The values from the editor camera are different from a regular camera in a scene</li><li>Distance field is the distance from the focal point to the editor camera</li><li>You <b>CAN'T</b> change the FOV at the moment for the editor camera, unity doesn't allow it, this field is only for runtime uses</li></ul>"
+                    , "img": "img/doc/camera/editorwindow02.png"
+                },
+                {
+                    "name": "Settings",
+                    "description": "You can find the settings in the editor window at the bottom.<br><ul><li><b>Runtime Able</b> - This will make the gameobject that holds all of the values <b>visible</b> in the project hierarchy and also make it so it works in runtime</li><li><b>Use Visibility Layers</b> - Turns on or off the feature of using the Visibility Layer Mask in the saved states</li><li><b>Render Mode</b> - Turns on or off the feature of using the Render Mode in the saved states</li></ul>"
+                    , "img": "img/doc/camera/editorwindow03.png"
+                }
+            ]
+        },
+        {
+            "name": "Runtime Setup",
+            "features": [
+                {
+                    "name": "Description",
+                    "description": "Gamestrap Editor Camera can be used for runtime applications and games."
+                },
+                {
+                    "name": "Runtime able checkbox",
+                    "description": "Make sure to always check the Runtime Able checkbox so the gameobject containing the “Camera View Data” component is visible in the hierarchy."
+                },
+                {
+                    "name": "Singleton",
+                    "description": "You can only have one “Camera Views Data” component in the scene since it’s a singleton."
+                }
+            ]
+        },
+        {
+            "name": "Component Scripts",
+            "features": [
+                {
+                    "name": "Description",
+                    "description": "You can find a set of components in <code>Gamestrap/Editor Camera/</code>"
+                },
+                {
+                    "name": "Camera Views Data",
+                    "description": "This component has all of the camera information saved up. You can change the information straight from there if you are handling in runtime.<br><b>The Animation Curve</b> is used for the camera transitions during runtime."
+                },
+                {
+                    "name": "Camera State Caller",
+                    "description": "The basic runtime component that you can use to call a specific state. Use it with the Unity UI Events to call it or through code."
+                },
+                {
+                    "name": "Trigger Camera State",
+                    "description": "This runtime component requires a Collider as a trigger and will activate the camera assigned (or look for the main camera) when an object enters it’s collider."
+                },
+                {
+                    "name": "Toggle Camera State",
+                    "description": "This runtime component has the methods that you can call to toggle through all the camera states and apply it to the camera assigned or main camera if no camera was selected."
+                }
+            ]
+        }
+    ],
+    "api": [
+        {
+            "name": "CameraViewsData.cs [Singleton]",
+            "description": "Class that handles all of the camera states",
+            "properties": [
+                {
+                    "name": "Methods",
+                    "list": [
+                        {
+                            "name": "void SetView(Camera camera, int slot)",
+                            "description": "Assings values to the camera from slot index in the editor window",
+                            "code": "CameraViewsData._SetView(Camera.main, 0);"
+                        },
+                        {
+                            "name": "void SetView(Camera camera, CameraState cameraState)",
+                            "description": "Assings values to the camera from the camera state",
+                            "code": "CameraViewsData._SetView(Camera.main, cameraState);"
+                        },
+                        {
+                            "name": "void SetView(Camera camera, int slot, float transitionTime, AnimationCurve animationCurve = null)",
+                            "description": "Lerps values to the camera from slot index in the editor window based on the transition time, you apply an animation curve to the lerping",
+                            "code": "CameraViewsData._SetView(Camera.main, 0, 1f);"
+                        },
+                        {
+                            "name": "void SetView(Camera camera, CameraState slot, float transitionTime, AnimationCurve animationCurve = null)",
+                            "description": "Lerps values to the camera from the camera state based on the transition time, you apply an animation curve to the lerping",
+                            "code": "CameraViewsData._SetView(Camera.main, cameraState, 1f);"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

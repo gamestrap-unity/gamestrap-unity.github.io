@@ -1,0 +1,36 @@
+*, h1,h2,h3 {
+ font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -55px;
+}
+
+footer {
+    height: 50px;
+    bottom: 0;
+}
+
+.footer-space{
+    height: 55px;
+}
+
+p.white-space-pre-line {
+    white-space: pre-line;
+}
+
+.feature-icon{
+    font-size: xx-large;
+}
+
+.webgl {
+    overflow:hidden;
+}

@@ -1,0 +1,116 @@
+{
+    "pages": [
+        "Introduction",
+        "Documentation",
+        "Example",
+        "API"
+    ],
+    "logo": "gamestrapui_logo.png",
+    "assetHTML": "<iframe src='https://api.assetstore.unity3d.com/affiliate/embed/package/28599/widget-wide-light?aid=1100lGad' style='width:600px height:130px border:0px'></iframe>",
+    "assetLink": "https://www.assetstore.unity3d.com/#!/content/28599?aid=1100lGad",
+    "assetIcon": "https://api.assetstore.unity3d.com/affiliate/embed/package/28599/icon",
+    "intro": "<b>Gamestrap UI</b> is a Unity pack that helps you design User Interfaces by providing you with the resources and tools to make something professional in less time. Whether you are an indie developer, student, freelancer or a game studio, we believe Gamestrap UI can provide you with the right tools for the job.",
+    "trailer": "diEgroqiHeA",
+    "features": [
+        {
+            "feature": "ICONS",
+            "number": 60
+        },
+        {
+            "feature": "9-SLICED SHAPES AND BORDERS",
+            "number": 70
+        },
+        {
+            "feature": "FONTS",
+            "number": 10
+        },
+        {
+            "feature": "PSD FORMAT",
+            "icon": "photo"
+        },
+        {
+            "feature": "COMPLETE UI PROJECT EXAMPLE",
+            "icon": "folder"
+        },
+        {
+            "feature": "PRODUCTIVY TOOLKIT",
+            "icon": "paint-brush"
+        }
+    ],
+    "testimonials": [
+        {
+            "user": "Mitch",
+            "title": "You get 5 stars",
+            "message": "Great product team, and for others reading this, this product is much more than some UI buttons, it also has fonts, many demo's to help you get an idea and much much more. Thanks for the product."
+        },
+        {
+            "user": " Keywise",
+            "title": "Wow!",
+            "message": "Great design, good simple code and a wonderful asset. Highly recommend."
+        },
+        {
+            "user": "Docsavage",
+            "title": "Functional and educational",
+            "message": "This product does a lot of the leg work for you by providing some example UI's and resources. Simply by looking at the way the example levels have been put together provides a lesson in how to set up a UI system for menus..."
+        }
+    ],
+    "webgl": "http://website-emeralddigital.rhcloud.com/gamestrap/loader.html",
+    "documentation": [
+        {
+            "name": "Graphics",
+            "features": [
+                {
+                    "name": "PSD Format",
+                    "description": "Gamestrap provides you with more than 70 shapes and borders. All of the graphics come in PSD format and are 9-sliced so you can use them anywhere in your UI.",
+                    "gif": "img/doc/localization01.gif"
+                },
+                {
+                    "name": "PSD Format",
+                    "description": "Gamestrap provides you with more than 70 shapes and borders. All of the graphics come in PSD format and are 9-sliced so you can use them anywhere in your UI.",
+                    "img": "img/gamestrapui.png"
+                },
+                {
+                    "name": "PSD Format",
+                    "description": "Gamestrap provides you with more than 70 shapes and borders. All of the graphics come in PSD format and are 9-sliced so you can use them anywhere in your UI."
+                },
+                {
+                    "name": "Shapes",
+                    "description": "Gamestrap provides you with more than 70 shapes and borders. All of the graphics come in PSD format and are 9-sliced so you can use them anywhere in your UI.",
+                    "code": "var x : 0float y : 1x : x + y % 2r// What is this?"
+                },
+                {
+                    "name": "Other object",
+                    "description": "Gamestrap provides you with more than 70 shapes and borders. All of the graphics come in PSD format and are 9-sliced so you can use them anywhere in your UI.",
+                    "video": "wbSaXAH-fas"
+                }
+            ]
+        }
+    ],
+    "api": [
+        {
+            "name": "Localization.cs",
+            "description": "This class handles stuff",
+            "properties": [
+                {
+                    "name": "Variables",
+                    "list": [
+                        {
+                            "name": "runInEditMode",
+                            "description": "this variable does something",
+                            "code": "x++x : x * 2//what am I doing?"
+                        },
+                        {
+                            "name": "runInEditMode",
+                            "description": "this variable does something"
+                        },
+                        {
+                            "name": "runInEditMode",
+                            "description": "this variable does something",
+                            "code": "//what am I doing?x++x : x * 2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

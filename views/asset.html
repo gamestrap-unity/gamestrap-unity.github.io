@@ -1,0 +1,120 @@
+<div class="uk-grid">
+    <div class="uk-width-1-6 uk-panel-box uk-margin-remove">
+        <ul class="uk-nav uk-nav-side uk-margin-left" data-uk-sticky>
+            <li ng-repeat="page in asset.pages track by $index"
+                nav-directive="pageIndex"
+                ng-click="setPageIndex($index)"
+                ng-class="{'uk-active' : $index === pageIndex }">
+                <a>{{page}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="uk-width-5-6 uk-margin-large-top uk-margin-large-bottom" ng-switch on="pageIndex">
+        <div ng-switch-when="0">
+            <div class="uk-width-1-1 uk-container-center uk-text-center uk-container">
+                <h2>Introduction</h2>
+
+                <p class="uk-width-2-3 uk-text-center uk-container-center" ng-bind-html="asset.intro"></p>
+
+                <iframe class="uk-responsive-width" width="640" height="360"
+                        ng-src="{{'https://www.youtube.com/embed/' + asset.trailer + '?rel=0&amp;modestbranding=1&amp;wmode=transparent'| trustUrl }}" 
+                        frameborder="0" allowfullscreen="" style="height: 359px;">
+                </iframe>
+
+                <h2 class="uk-margin-large-top">Main Features</h2>
+                <div class='uk-grid uk-margin-large-top' data-uk-grid-margin>
+                    <div ng-repeat="feature in asset.features" class='uk-width-1-3'>
+                        <p class="feature-icon" ng-style="{ 'color' : asset.featureColor}"><i class="uk-icon-{{feature.icon}}"></i>{{feature.number}}</p>
+                        <p>{{feature.feature}}</p>
+
+                    </div>
+                    <hr class="uk-grid-divider" ng-if="$index !== 0 && $index % 3 === 0">
+                </div>
+
+                <h2 ng-show="asset.testimonials" class="uk-margin-large-top">User Reviews</h2>
+
+                <div class="uk-grid uk-grid-large uk-grid-match" data-uk-grid-match>
+                    <div ng-repeat="testi in asset.testimonials" class='uk-width-1-3'>
+                        <div class="uk-panel uk-panel-box uk-text-left">
+                            <i class='uk-icon-user'></i> {{testi.user}}
+                            <p class='white-space-pre-line'><b>{{testi.title}}</b><br>{{testi.message}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <iframe class="uk-responsive-width uk-margin-large-top"  style='width:600px; height:130px; border:0px'
+                        ng-src="{{asset.assetHTML | trustUrl }}">
+                </iframe>
+                
+            </div>
+        </div>
+
+        <div ng-switch-when="1" class="">
+
+            <h1>Documentation</h1>
+
+            <p>Here you'll be able to see what you can do with the asset, if you have any questions don't hesitate to contact us!</p>
+
+            <div class="uk-grid" ng-repeat="section in asset.documentation">
+                <div class="uk-width-1-1 uk-padding-top"><h2>{{section.name}}</h2></div>
+                
+                <hr class="uk-grid-divider uk-width-1-1">
+                <div ng-repeat="feature in section.features" class="uk-panel uk-panel-divider uk-width-1-1">
+                    <h3 class="uk-panel-title">{{feature.name}}</h3>
+                    <div class="uk-grid uk-margin-large-right">
+                        <div class="uk-width-1-2" ng-bind-html="feature.description"></div>
+                        <div class="uk-width-1-2">
+                            <img ng-if="feature.gif" height="360" ng-src="{{feature.gif}}" alt="gif-doc">
+                            <img class='uk-border-rounded' ng-if="feature.img" height="360" ng-src="{{feature.img}}" alt="img-doc">
+                            <iframe ng-if="feature.video" class="uk-width-1-1" height="360"
+                                    ng-src="{{'https://www.youtube.com/embed/' + feature.video + '?rel=0&amp;modestbranding=1&amp;wmode=transparent'| trustUrl }}" 
+                                    frameborder="0" allowfullscreen="" style="height: 359px;">
+                            </iframe>
+                            <pre ng-if="feature.code"><code>{{feature.code}}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-margin-large-right uk-height-1-1" ng-switch-when="2">
+            <div class="uk-width-1-1">
+                <iframe class="uk-width-1-1 webgl" scrolling="no" height="600" src="http://website-emeralddigital.rhcloud.com/gamestrap/loader.html"></iframe>
+            </div>
+        </div>
+
+        <div ng-switch-when="3" class="">
+
+            <h1>API</h1>
+
+            <div class="uk-accordion uk-margin-large-right" data-uk-accordion="{collapse: false, showfirst: false }">
+
+                <div ng-repeat="object in asset.api">
+                    <h3 class="uk-accordion-title">{{object.name}}</h3>
+                    <div class="uk-accordion-content">
+                        <p>{{object.description}}</p>
+                        <table ng-repeat="property in object.properties" class="uk-table uk-table-striped">
+                            <thead>
+                                <tr>
+                                    <th>{{property.name}}</th>
+                                    <th></th><th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="field in property.list">
+                                    <td>{{field.name}}</td>
+                                    <td>{{field.description}}</td>
+                                    <td>
+<pre ng-if="field.code"><code>{{field.code}}</code></pre></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

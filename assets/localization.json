@@ -1,0 +1,37 @@
+{
+    "pages": [
+        "Introduction"
+    ],
+    "logo": "localization_logo.png",
+    "assetHTML": "",
+    "assetLink": "",
+    "assetIcon": "",
+    "intro": "<b>Gamestrap Localization</b> is a <b>WIP</b> asset that we are looking to improve over time and publish in the Asset Store. The asset was published before but we decided to take it back and redesign it before publishing again, if you are interested in trying it out and becoming a <b>beta tester</b>, let us know!",
+    "trailer": "wbSaXAH-fas",
+    "features": [
+        {
+            "feature": "SIMPLE AND INTUITIVE",
+            "icon": "object-group"
+        },
+        {
+            "feature": "LOAD DYNAMIC CONTENT FROM URL",
+            "icon": "play"
+        },
+        {
+            "feature": "WORKS IN EDITOR MODE",
+            "icon": "columns"
+        },
+        {
+            "feature": "2D & ISO MODE SUPPORTED",
+            "icon": "image"
+        },
+        {
+            "feature": "EXPORTS TO JSON",
+            "icon": "file-text-o"
+        },
+        {
+            "feature": "PRE-MADE COMPONENTS",
+            "icon": "cog"
+        }
+    ]
+}
