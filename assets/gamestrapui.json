@@ -55,7 +55,7 @@
             "message": "This product does a lot of the leg work for you by providing some example UI's and resources. Simply by looking at the way the example levels have been put together provides a lesson in how to set up a UI system for menus..."
         }
     ],
-    "webgl": "http://website-emeralddigital.rhcloud.com/gamestrap/loader.html",
+    "webgl": "http://www.gamestrap.info/examples/ui/loader.html",
     "documentation": [
         {
             "name": "Graphics",
