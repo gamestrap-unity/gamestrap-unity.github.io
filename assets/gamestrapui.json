@@ -2,24 +2,23 @@
     "pages": [
         "Introduction",
         "Documentation",
-        "Example",
-        "API"
+        "Example"
     ],
     "logo": "gamestrapui_logo.png",
     "assetHTML": "https://api.assetstore.unity3d.com/affiliate/embed/package/28599/widget-wide-light?aid=1100lGad",
     "assetLink": "https://www.assetstore.unity3d.com/#!/content/28599?aid=1100lGad",
     "assetIcon": "https://api.assetstore.unity3d.com/affiliate/embed/package/28599/icon",
     "intro": "<b>Gamestrap UI</b> is a Unity pack that helps you design <b>User Interfaces</b> by providing you with the resources and tools to make something professional in <b>less time</b>. Whether you are an indie developer, student, freelancer or a game studio, we believe Gamestrap UI can provide you with the right tools for the job.",
-    "trailer": "diEgroqiHeA",
+    "trailer": "Ps9qECn9v98",
     "featureColor" : "#378e68",
     "features": [
         {
             "feature": "ICONS",
-            "number": 60
+            "number": 70
         },
         {
             "feature": "9-SLICED SHAPES AND BORDERS",
-            "number": 70
+            "number": 80
         },
         {
             "feature": "FONTS",
@@ -55,159 +54,11 @@
             "message": "This product does a lot of the leg work for you by providing some example UI's and resources. Simply by looking at the way the example levels have been put together provides a lesson in how to set up a UI system for menus..."
         }
     ],
-    "webgl": "http://www.gamestrap.info/examples/ui/loader.html",
+    "webgl": "examples/ui/loader.html",
     "documentation": [
         {
-            "name": "Graphics",
-            "features": [
-                {
-                    "name": "Icons",
-                    "description": "The asset contains more than 60 icons for you to use anywhere in your application.",
-                    "img" : "img/doc/ui/icons.jpg"
-                },
-                {
-                    "name": "Shapes",
-                    "description": "There are more than 70 different kind of shapes to be used anywhere in the UI, these can become buttons, panels, sliders, etc… they are all 9-sliced shapes so you can adjust them however you like. Remember you can rotate and invert them to get different results!"
-                },
-                {
-                    "name": "Fonts",
-                    "description": "We’ve included 10 different fonts and their licenses for you to use in your game or application.",
-                    "img" : "img/doc/ui/fonts.jpg"
-                },
-                {
-                    "name": "Prefabs",
-                    "description": "There are some prefabs created for you to start your UI with, you can find them under <code>GameObject/Gamestrap UI/</code> in the menu."
-                },
-                {
-                    "name": "Scenes",
-                    "description": "Gamestrap comes with a set of template examples of different UI menus, you can find them in the Project Window under <code>Gamestrap/UI/Examples/Screen Examples</code>"
-                }
-            ]
-        },
-        {
-            "name": "Gamestrap Toolkit",
-            "features": [
-                {
-                    "name": "Theme",
-                    "description": "A theme is a custom asset that saves all of the information that the gamestra toolkit handles, you can have multiple themes and even switch them during runtime. The toolkit can help you save a color pallette, suggest new colors based on color theory, add effects to your scene and more…",
-                    "img" : "img/doc/ui/theme.png"
-                },
-                {
-                    "name": "Creating a Theme",
-                    "description": " You can create a theme by right clicking on the project window and going to <code>Create/Gamestrap UI Theme</code>"
-                },
-                {
-                    "name": "Opening the Toolkit",
-                    "description": "The Toolkit can be opened by going to <code>Window/Gamestrap UI Kit</code><br>You can assign the theme you created on the top of the window and even duplicate it with the “Save as…” button on the top right."
-                },
-                {
-                    "name": "Toolkit Features",
-                    "description": "In the video it shows and explains what the toolkit does some examples are:<ul><li>Save your color palette</li><li> Get Color suggestions</li><li> Look for all of the colors used in your scene</li><li> Assign colors to UI based on selections or tags</li><li> Apply different types of effects</li><li> Smartly assign fonts through your hierarchy</li></ul>",
-                    "video": "diEgroqiHeA"
-                }
-            ]
-        },
-        {
-            "name": "Complete Project Example",
-            "features": [
-                {
-                    "name": "Setup and run the project example",
-                    "description": "- The scenes are located in <code>Assets/Examples/Complete Project/Screens/</code><br>- Add the three scenes of the Complete Project Example to the “Scenes In Build” under <code>File/Build Settings</code><br>- Open the Main Menu Scene and press play."
-                },
-                {
-                    "name": "Prefab Oriented Implementation",
-                    "description": "One of the ways we suggest working is to create your own prefab set with your UI elements and use those in your project.That way, anytime you need to change a color or font, you can do so to the prefab and the change will propagate throughout all of your project instead of going one by one and changing it by hand. You can see this being done in the under the folder <code>...Examples/Complete Project/Global/Prefabs</code><br>Take a look also at the scene located in the folder named “UI Elements”."
-                },
-                {
-                    "name": "Application Control Prefab",
-                    "description": "Located in  <code>Examples/Complete Project/Global/</code> it’s a Singleton GameObject that is in charge of the scene transitions and any other global data.<br>It’s present in every scene for testing purposes but the only one that should matter is the one that is in the starting screen since the others ones get destroyed when you transition into a new scene."
-                },
-                {
-                    "name": "Prefabs",
-                    "description": "Located in  <code>Examples/Complete Project/Global/</code> it’s a Singleton GameObject that is in charge of the scene transitions and any other global data.<br>It’s present in every scene for testing purposes but the only one that should matter is the one that is in the starting screen since the others ones get destroyed when you transition into a new scene."
-                }
-            ]
-        },
-        {
-            "name": "Tag Example",
-            "features": [
-                {
-                    "name": "Tag Oriented Implementation",
-                    "description": "Another way of handling colors and effects is through assigning tags to the UI elements. You can then use the toolkit and color palette to connect which color and effects are applied to each tag. One of the benefits of this approach is that you can implement easily runtime theme changes.<br><b>Note that we use the default tags so it works right away as an example, you should use new tags for your own project</b>"
-                },
-                {
-                    "name": "Example Scene",
-                    "description": "You can find the example of how this is done at <code>Examples/Tag Example</code><br>In the folder you’ll see the scene and also the three themes.<br>You can test it out in the editor by opening the toolkit, opening the specific theme and then under “Additional Options” clicking on the “Apply theme to Tags in scene”.",
-                    "img" : "img/doc/ui/tag-example.png"
-                },
-                {
-                    "name": "Applying a theme during runtime",
-                    "description": "In the example scene you can see how it works in runtime as well<br>There is a “Theme Toggler” Gameobject with the “Theme Toggler” component assign to it with the themes in an array that toggles in between them when the Toggle Theme Button is pressed."
-                }
-            ]
-        },
-        {
-            "name": "Helper Scripts",
-            "features": [
-                {
-                    "name": "Description",
-                    "description": "Gamestrap comes with some simple components to help you with your UI creation, they are mostly for convenience and also to show you ways you can create your own scripts."
-                },
-                {
-                    "name": "ButtonShowHide",
-                    "description": "This component can be assigned to a Button and will activate or deactivate the GameObjects it has in it’s list.<br><b>Start Show Group Variable</b> will set how the gameObjects start when you run the scene."
-                },
-                {
-                    "name": "ToggleButtonIcon",
-                    "description": "Simple component that toggles between two images when pressed. You can only assign it to a Toggle button and make sure you assign the <code>onIcon</code> and <code>offIcon</code> sprite references."
-                },
-                {
-                    "name": "ThemeButton & ThemeToggler",
-                    "description": "Components specifically for the runtime theme changer."
-                }
-            ]
-        }
-    ],
-    "api": [
-        {
-            "name": "GamestrapTheme.cs",
-            "description": "Scriptable Object incharge of saving all of hte UI settings of Gamestrap UI toolkit",
-            "properties": [
-                {
-                    "name": "Variables",
-                    "list": [
-                        {
-                            "name" : "List<ColorSet> palette",
-                            "description": "Contains all of the ColorSets of the theme"
-                        },
-                        {
-                            "name" : "List<EffectSet> effectSets",
-                            "description": "Contains all of the Effects of the theme"
-                        }
-                    ]
-                },
-                {
-                    "name": "Methods",
-                    "list": [
-                        {
-                            "name": "void ApplyTheme()",
-                            "description": "Applies all of the tagged UI elements in the scene"
-                        },
-                        {
-                            "name": "void SetColorBlock(UnityEngine.UI.Selectable selectable, ColorSet colorSet)",
-                            "description": "Assigns the ColorSet to a UI element"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "ColorSet.cs",
-            "description": "ColorSet is a color in the pallete of the Gamestrap UI Toolkit which handles the colors to be set to any UI in the scene"
-        },
-        {
-            "name": "EffectSet.cs",
-            "description": "Effect is a set of effects in the Gamestrap UI Toolkit which handles the effects to be set to any UI in the scene"
+            "name": "Manual PDF",
+            "url": "gamestrapui_manual.pdf"
         }
     ]
 }

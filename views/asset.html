@@ -57,11 +57,12 @@
             <p>Here you'll be able to see what you can do with the asset, if you have any questions don't hesitate to contact us!</p>
 
             <div class="uk-grid" ng-repeat="section in asset.documentation">
-                <div class="uk-width-1-1 uk-padding-top"><h2>{{section.name}}</h2></div>
-                
+                <div class="uk-width-1-1 uk-padding-top" ng-hide="section.url != null"><h2>{{section.name}}</h2></div>
+                <a class="uk-panel-title" href="{{section.url}}" ng-hide="section.url == null">{{section.name}}</a>
                 <hr class="uk-grid-divider uk-width-1-1">
                 <div ng-repeat="feature in section.features" class="uk-panel uk-panel-divider uk-width-1-1">
                     <h3 class="uk-panel-title">{{feature.name}}</h3>
+                    
                     <div class="uk-grid uk-margin-large-right">
                         <div class="uk-width-1-2" ng-bind-html="feature.description"></div>
                         <div class="uk-width-1-2">
@@ -80,7 +81,7 @@
 
         <div class="uk-margin-large-right uk-height-1-1" ng-switch-when="2">
             <div class="uk-width-1-1">
-                <iframe class="uk-width-1-1 webgl" scrolling="no" height="600" src="http://website-emeralddigital.rhcloud.com/gamestrap/loader.html"></iframe>
+                <iframe class="uk-width-1-1 webgl" scrolling="no" height="600" src="{{asset.webgl}}"></iframe>
             </div>
         </div>
 
